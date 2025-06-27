@@ -3,41 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Design Studio - Elevating Comfort</title>
-    
-    <!-- Tailwind CSS CDN -->
+    <title>Life Design Studio - 스튜디오</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./public/css/style.css">
-    
+    <style>
+        body {
+            font-family: "Pretendard Variable", Pretendard, sans-serif;
+            opacity: 1;
+            transition: opacity 0.4s ease-in-out;
+            background-color: #faf9f7;
+        }
+        body.fade-out {
+            opacity: 0;
+        }
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 4px;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: currentColor;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after,
+        .active-link::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="bg-white overflow-hidden">
+<body class="text-gray-800">
 
-    <header class="fixed top-0 left-0 w-full p-8 z-[100] flex justify-between items-center pointer-events-none">
-        <div>
-            <a href="#" class="font-bold text-2xl pointer-events-auto text-black">LIFE DESIGN STUDIO</a>
-        </div>
-        <div class="text-right">
-            <h1 class="text-4xl font-semibold mt-4 mr-24 text-black">모든 곡선에서 편안함을 높이다</h1>
-            <!-- <a href="#" class="inline-block border border-gray-800 px-6 py-3 uppercase tracking-widest text-sm mt-4 pointer-events-auto hover:bg-gray-800 hover:text-white transition-colors duration-300">경험 탐색하기</a> -->
-        </div>
-    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[90vh] bg-cover bg-center" style="background-image: url('./public/assets/images/chair5.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
 
-    <main id="main-container" class="flex h-screen w-screen">
-        <!-- Sections will be injected here by JavaScript -->
+            <nav class="absolute top-8 md:top-12 right-8 md:right-24 z-10">
+                <ul class="flex space-x-4 md:space-x-8 text-white text-sm font-semibold">
+                    <li><a href="index.html" class="nav-link active-link">홈</a></li>
+                    <li><a href="solutions.html" class="nav-link">인테리어</a></li>
+                    <li><a href="furniture.html" class="nav-link">가구</a></li>
+                    <li><a href="contact.html" class="nav-link">문의하기</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile-specific Hero Content -->
+            <div class="md:hidden absolute inset-0 flex flex-col items-center justify-center text-lelft p-8">
+                <h1 class="text-white text-8xl font-extrabold tracking-[-0.05em] leading-none select-none">
+                    LIFE DESIGN<br>STUDIO
+                </h1>
+                <p class="text-white text-sm leading-relaxed mt-8 max-w-xs">
+                    라이프 디자인 스튜디오는 공간에 대한 깊이 있는 </br>이해를 바탕으로 최적의 인테리어 솔루션을 제공하며, </br>이탈리아에서 직수입한 프리미엄 목재 가구로 </br>공간의 품격을 완성합니다.
+                </p>
+                <a href="solutions.html" class="inline-flex items-center gap-3 mt-8 px-6 py-3 text-sm bg-white bg-opacity-30 text-black rounded-full font-semibold hover:bg-opacity-100 transition">
+                    <span class="w-2.5 h-2.5 bg-gray-700 rounded-full"></span>
+                    인테리어 솔루션 보기
+                </a>
+            </div>
+
+            <!-- Desktop-specific Hero Content -->
+            <div class="hidden md:flex absolute inset-0 items-center justify-start text-left p-12 pointer-events-none">
+                <h1 class="text-white text-6xl md:text-[20vw] font-extrabold tracking-[-0.05em] leading-none select-none">
+                    LIFE<br>DESIGN<br>STUDIO
+                </h1>
+            </div>
+
+            <div class="hidden md:block absolute top-1/2 right-24 -translate-y-1/3 max-w-xs text-white">
+                <p class="text-sm leading-relaxed">
+                    라이프 디자인 스튜디오는 공간에 대한 깊이 있는 </br>이해를 바탕으로 최적의 인테리어 솔루션을 제공하며, </br>이탈리아에서 직수입한 프리미엄 목재 가구로 </br>공간의 품격을 완성합니다.
+                </p>
+                <a href="solutions.html" class="inline-flex items-center gap-3 mt-6 px-6 py-3 text-sm bg-white bg-opacity-30 text-black rounded-full font-semibold hover:bg-opacity-100 transition">
+                    <span class="w-2.5 h-2.5 bg-gray-700 rounded-full"></span>
+                    인테리어 솔루션 보기
+                </a>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="py-24 md:py-36 px-6 md:px-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 md:gap-x-12 gap-y-8 items-end">
+                    <!-- Title Block -->
+                    <div class="md:col-span-12 order-1">
+                        <div>
+                            <p class="text-xs tracking-widest text-gray-500 mb-4">* 공간 컨설팅 & 이탈리아 가구 큐레이션</p>
+                            <h2 class="max-w-5xl text-2xl md:text-4xl text-gray-800 font-semibold leading-snug mb-4">
+                                우리는 단순한 디자인을 넘어, 공간의 본질적인 가치를 높이는 <br class="hidden md:block">인테리어 솔루션과 시간이 흘러도 변치 않는 이탈리아 명품 <br class="hidden md:block">목재 가구를 통해 당신의 일상에 영감을 더합니다.
+                            </h2>
+                            <div class="flex items-center gap-1">
+                                <div class="w-5 h-5 border border-gray-400 rounded-full"></div>
+                                <div class="w-5 h-5 bg-black rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Block -->
+                    <div class="md:col-span-8 order-2">
+                        <img src="./public/assets/images/interior-hero.jpg" alt="Interior design 1" class="w-full object-cover shadow-lg rounded-lg">
+                    </div>
+
+                    <!-- Description Block -->
+                    <div class="md:col-span-4 order-3 md:order-3">
+                         <p class="max-w-xl text-sm leading-relaxed mb-4">
+                            모든 공간은 그 자체의 이야기를 가질 잠재력이 있습니다. 저희는 고객의 비전과 라이프스타일에 귀 기울여, 기능성과 심미성을 모두 만족시키는 맞춤형 인테리어 솔루션을 제안합니다.
+                        </p>
+                        <p class="max-w-xl text-sm leading-relaxed mb-4">
+                            오랜 노하우를 지닌 전문가가 이탈리아 현지에서 직접 선별한 최고급 목재 가구는 당신의 공간을 더욱 특별하게 만들어 줄 것입니다. 장인의 손길로 탄생한 가구의 깊이를 경험해보세요.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-xs font-bold tracking-widest border-b-2 border-gray-800 pb-1 hover:text-gray-500 hover:border-gray-500 transition">인테리어 포트폴리오<span class="ml-1">↗</span></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Furniture Section -->
+        <section class="pb-28 px-6 md:px-12">
+            <div class="container mx-auto">
+                <div class="border-gray-300 border-t py-12">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                        <div class="md:col-span-4 order-2 md:order-1">
+                            <p class="text-sm leading-relaxed mb-4">
+                                라이프 디자인 스튜디오가 선보이는 가구는 단순한 제품이 아닌, 이탈리아 장인 정신이 깃든 예술 작품입니다. 수세기에 걸쳐 전해 내려온 전통 방식과 현대적인 디자인이 만나 시간이 지날수록 더욱 빛나는 가치를 선사합니다.
+                            </p>
+                            <p class="text-sm leading-relaxed mb-4">
+                                저희 큐레이터가 이탈리아 전역을 여행하며 찾아낸 유니크한 목재 가구 컬렉션을 만나보세요. 모든 제품은 최상급 원목과 친환경 소재만을 사용하여 당신의 공간을 안전하고 아름답게 채웁니다.
+                            </p>
+                            <a href="furniture.html" class="inline-flex items-center text-xs font-bold tracking-widest border-b-2 border-gray-800 pb-1 hover:text-gray-500 hover:border-gray-500 transition">이탈리아 가구 컬렉션 보기<span class="ml-1">↗</span></a>
+                        </div>
+                        <div class="md:col-span-8 order-1 md:order-2">
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                                <img src="./public/assets/images/furniture(5).jpg" alt="Interior design 1" class="h-auto w-full object-cover rounded-lg">
+                                <img src="./public/assets/images/furniture(1).jpg" alt="Interior design 2" class="h-auto w-full object-cover rounded-lg">
+                                <img src="./public/assets/images/furniture(4).jpg" alt="Interior design 3" class="h-auto w-full object-cover rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Image Section -->
+        <section class="px-6 md:px-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-end">
+                    <div class="md:col-span-7">
+                        <img src="./public/assets/images/table2.jpg" alt="Spacious living room" class="w-full object-cover rounded-lg">
+                    </div>
+                    <div class="md:col-span-2"></div>
+                    <div class="md:col-span-3">
+                         <img src="./public/assets/images/studio9.jpg" alt="Decorative vase" class="w-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Big Text Section -->
+        <section class="relative py-24 px-6 md:px-12 text-right overflow-hidden mt-[-5rem] md:mt-[-10rem]">
+            <h2 class="text-[#e8e4de] text-[20vw] md:text-[12vw] font-extrabold tracking-[-0.05em] leading-none select-none">
+                LIFE DESIGN<br>STUDIO
+            </h2>
+        </section>
+
     </main>
-    
-    <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="./public/js/script.js"></script>
 
+    <footer class="bg-transparent">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>&copy; 2025 Life Design Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-10 right-10 z-50 hidden h-12 w-12 items-center justify-center text-gray-800 transition-all duration-300 hover:text-gray-500 hover:scale-110 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <!-- Page Transition Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            body.addEventListener('click', function(e) {
+                const link = e.target.closest('a');
+
+                if (!link) return;
+
+                if (link.hostname !== window.location.hostname || 
+                    link.pathname === window.location.pathname ||
+                    link.target === '_blank') {
+                    return;
+                }
+
+                e.preventDefault();
+                const destination = link.href;
+                body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = destination;
+                }, 400);
+            });
+
+            window.addEventListener('pageshow', function(event) {
+                if (event.persisted) {
+                    body.classList.remove('fade-out');
+                }
+            });
+
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollToTopBtn.classList.remove('hidden');
+                    scrollToTopBtn.classList.add('flex');
+                } else {
+                    scrollToTopBtn.classList.add('hidden');
+                    scrollToTopBtn.classList.remove('flex');
+                }
+            };
+
+            scrollToTopBtn.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        });
+    </script>
 </body>
 </html> 
