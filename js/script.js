@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Life Design </br>Studio',
             description: '공간에 대한 깊은 이해와 다년간의 경험을 바탕으로, 단순한 미학을 넘어 당신의 삶의 방식과 가치를 반영하는 가장 잘 맞는 맞춤형 디자인을 제안합니다.',
             link: 'studio.html',
-            imageUrl: './public/assets/images/hero-1.jpg'
+            imageUrl: './assets/images/hero-1.jpg'
         },
         {
             title: '인테리어 </br>솔루션',
             description: '주거 공간부터 상업 공간까지, 일관성 있고 영감을 주는 환경을 보장하는 종합적인 인테리어 디자인 솔루션을 제공합니다.',
             link: 'solutions.html',
-            imageUrl: './public/assets/images/hero-2.jpg'
+            imageUrl: './assets/images/hero-2.jpg'
         },
         {
             title: '가구 </br>디자인',
             description: '장인의 정교한 손길과 지속가능한 최고급 소재가 만나, 시간이 흐를수록 가치를 더하는 특별한 가구를 탄생시킵니다.',
             link: 'furniture.html',
-            imageUrl: './public/assets/images/hero-3.jpg'
+            imageUrl: './assets/images/hero-3.jpg'
         },
         {
             title: '우리의 </br>디자인 팀',
