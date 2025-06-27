@@ -42,7 +42,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="relative h-[90vh] bg-cover bg-center" style="background-image: url('./assets/images/chair5.jpg');">
+        <section class="relative h-[90vh] bg-cover bg-center" style="background-image: url('./assets/images-optimized/chair5.jpg');">
             <div class="absolute inset-0 bg-black bg-opacity-20"></div>
 
             <nav class="absolute top-8 md:top-12 right-8 md:right-24 z-10">
@@ -106,7 +106,10 @@
 
                     <!-- Image Block -->
                     <div class="md:col-span-8 order-2">
-                        <img src="./assets/images/interior-hero.jpg" alt="Interior design 1" class="w-full object-cover shadow-lg rounded-lg">
+                        <picture>
+                            <source srcset="./assets/images-optimized/studio1.webp" type="image/webp">
+                            <img src="./assets/images-optimized/studio1.jpg" alt="Interior design 1" class="w-full object-cover shadow-lg rounded-lg">
+                        </picture>
                     </div>
 
                     <!-- Description Block -->
@@ -117,7 +120,7 @@
                         <p class="max-w-xl text-sm leading-relaxed mb-4">
                             오랜 노하우를 지닌 전문가가 이탈리아 현지에서 직접 선별한 최고급 목재 가구는 당신의 공간을 더욱 특별하게 만들어 줄 것입니다. 장인의 손길로 탄생한 가구의 깊이를 경험해보세요.
                         </p>
-                        <a href="#" class="inline-flex items-center text-xs font-bold tracking-widest border-b-2 border-gray-800 pb-1 hover:text-gray-500 hover:border-gray-500 transition">인테리어 포트폴리오<span class="ml-1">↗</span></a>
+                        <a href="solutions.html" class="inline-flex items-center text-xs font-bold tracking-widest border-b-2 border-gray-800 pb-1 hover:text-gray-500 hover:border-gray-500 transition">인테리어 포트폴리오<span class="ml-1">↗</span></a>
                     </div>
                     
                 </div>
@@ -140,9 +143,18 @@
                         </div>
                         <div class="md:col-span-8 order-1 md:order-2">
                             <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
-                                <img src="./assets/images/furniture(5).jpg" alt="Interior design 1" class="h-auto w-full object-cover rounded-lg">
-                                <img src="./assets/images/furniture(1).jpg" alt="Interior design 2" class="h-auto w-full object-cover rounded-lg">
-                                <img src="./assets/images/furniture(4).jpg" alt="Interior design 3" class="h-auto w-full object-cover rounded-lg">
+                                <picture>
+                                    <source srcset="./assets/images-optimized/furniture(5).webp" type="image/webp">
+                                    <img src="./assets/images-optimized/furniture(5).jpg" alt="Interior design 1" class="h-auto w-full object-cover rounded-lg">
+                                </picture>
+                                <picture>
+                                    <source srcset="./assets/images-optimized/furniture(1).webp" type="image/webp">
+                                    <img src="./assets/images-optimized/furniture(1).jpg" alt="Interior design 2" class="h-auto w-full object-cover rounded-lg">
+                                </picture>
+                                <picture>
+                                    <source srcset="./assets/images-optimized/furniture(4).webp" type="image/webp">
+                                    <img src="./assets/images-optimized/furniture(4).jpg" alt="Interior design 3" class="h-auto w-full object-cover rounded-lg">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -155,11 +167,17 @@
             <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-end">
                     <div class="md:col-span-7">
-                        <img src="./assets/images/table2.jpg" alt="Spacious living room" class="w-full object-cover rounded-lg">
+                        <picture>
+                            <source srcset="./assets/images-optimized/table2.webp" type="image/webp">
+                            <img src="./assets/images-optimized/table2.jpg" alt="Spacious living room" class="w-full object-cover rounded-lg">
+                        </picture>
                     </div>
                     <div class="md:col-span-2"></div>
                     <div class="md:col-span-3">
-                         <img src="./assets/images/studio9.jpg" alt="Decorative vase" class="w-full object-cover rounded-lg">
+                         <picture>
+                            <source srcset="./assets/images-optimized/studio9.webp" type="image/webp">
+                            <img src="./assets/images-optimized/studio9.jpg" alt="Decorative vase" class="w-full object-cover rounded-lg">
+                        </picture>
                     </div>
                 </div>
             </div>
